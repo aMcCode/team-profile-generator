@@ -1,10 +1,10 @@
 const Employee = require("../lib/Employee")
 
-//const employee = new Employee("Alicia", 0, 'g@g.com', 'myRole');
 const emp = new Employee();
+//const emp = new Employee("Alicia", 0, 'g@g.com', 'myRole');
 
 test('can create an employee obj', () => {
-    expect(emp.getName().toBeTruthy());
+    expect(emp.name).toBeTruthy();
     expect(emp.name).toEqual(expect.any(String));
     expect(emp.id).toEqual(expect.any(Number));
     expect(emp.email).toMatch(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
@@ -12,7 +12,7 @@ test('can create an employee obj', () => {
 });
 
 test("can get employee's name", () => {
-    expect(emp.getName().toBeTruthy());
+    expect(emp.getName()).toBeTruthy();
     expect(emp.getName()).toEqual(expect.any(String));
 });
 
@@ -25,6 +25,6 @@ test("can get employee's email", () => {
 });
 
 test("can get employee's role", () => {
-    expect(emp.getRole().toBeTruthy());
+    expect(emp.getRole()).toBeTruthy();
     expect(emp.getRole()).toEqual(expect.any(String));
 });
