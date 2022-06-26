@@ -1,7 +1,7 @@
 const Manager = require("../lib/Manager")
 
-const manager = new Manager();
-//const manager = new Manager("Alicia", 0, 'g@g.com', '1432M');
+//const manager = new Manager();
+const manager = new Manager("Lisa", 1, 'x@x.com', '1432M');
 
 test('can create a manager obj', () => {
     expect(manager.name).toBeTruthy();

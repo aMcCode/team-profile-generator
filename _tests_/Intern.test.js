@@ -1,7 +1,7 @@
 const Intern = require("../lib/Intern")
 
-const intern = new Intern();
-//const intern = new Intern("Alicia", 0, 'g@g.com', 'aMcCode');
+//const intern = new Intern();
+const intern = new Intern("Alicia", 2, 'a@a.com', 'School of Life');
 
 test('can create a intern obj', () => {
     expect(intern.name).toBeTruthy();
@@ -23,9 +23,9 @@ test("can get intern's email", () => {
     expect(intern.email).toMatch(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 });
 
-test("can get intern's office number", () => {
-    expect(intern.getOfficeNum()).toBeTruthy();
-    expect(intern.getOfficeNum()).toEqual(expect.any(String));
+test("can get intern's school", () => {
+    expect(intern.getSchool()).toBeTruthy();
+    expect(intern.getSchool()).toEqual(expect.any(String));
 });
 
 test("can get intern's role", () => {

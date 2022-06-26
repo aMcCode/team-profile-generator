@@ -1,7 +1,7 @@
 const Engineer = require("../lib/Engineer")
 
-const engineer = new Engineer();
-//const engineer = new Engineer("Alicia", 0, 'g@g.com', 'aMcCode');
+//const engineer = new Engineer();
+const engineer = new Engineer("Rachel", 3, 'r@r.com', 'aMcCode');
 
 test('can create a engineer obj', () => {
     expect(engineer.name).toBeTruthy();
@@ -23,9 +23,9 @@ test("can get engineer's email", () => {
     expect(engineer.email).toMatch(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
 });
 
-test("can get engineer's office number", () => {
-    expect(engineer.getOfficeNum()).toBeTruthy();
-    expect(engineer.getOfficeNum()).toEqual(expect.any(String));
+test("can get engineer's github", () => {
+    expect(engineer.getGithub()).toBeTruthy();
+    expect(engineer.getGithub()).toEqual(expect.any(String));
 });
 
 test("can get engineer's role", () => {
