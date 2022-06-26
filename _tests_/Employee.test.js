@@ -1,7 +1,7 @@
 const Employee = require("../lib/Employee")
 
-const emp = new Employee();
-//const emp = new Employee("Alicia", 0, 'g@g.com', 'myRole');
+//const emp = new Employee();
+const emp = new Employee("Alicia", 0, 'g@g.com', 'myRole');
 
 test('can create an employee obj', () => {
     expect(emp.name).toBeTruthy();
