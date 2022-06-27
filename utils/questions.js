@@ -1,3 +1,7 @@
+const Manager = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Manager');
+const Engineer = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Engineer');
+const Intern = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Intern');
+
 const managerQuestions = [
     {
       type: "input",
@@ -144,52 +148,51 @@ const employeeQuestions = [
         },
         when: (answers) => answers.nextStep === "Add an intern"
     }, 
-
 ];
 
-const mock_inputs = {
-
-    managerName: 'Lisa',
-    managerID: '1',
-    managerEmail: 'lisa@gmail.com',
-    managerOfficeNum: '15B',
-    employeeInfo: [
-        {
-            nextStep: 'Add an engineer',
-            employeeName: 'Alicia',
-            employeeID: '342',
-            employeeEmail: 'mcneila1997@gmail.com',
-            github: 'aMcCode'
-        },
-        {
-            nextStep: 'Add an intern',
-            employeeName: 'Kia',
-            employeeID: '379',
-            employeeEmail: 'kiaj@gmail.com',
-            school: 'NCCU'
-        },
-        {
-            nextStep: 'Add an engineer',
-            employeeName: 'Alicia',
-            employeeID: '342',
-            employeeEmail: 'mcneila1997@gmail.com',
-            github: 'aMcCode'
-        },
-        {
-            nextStep: 'Add an intern',
-            employeeName: 'Heidi',
-            employeeID: '235',
-            employeeEmail: 'heidi@gmail.com',
-            school: 'NCCU'
-        },  
-        {
-            nextStep: 'Add an intern',
-            employeeName: 'Mya',
-            employeeID: '111',
-            employeeEmail: 'mya@gmail.com',
-            school: 'NC State'
-        }   
-    ]
-}
+const mock_inputs = [
+  {
+    type: 'Manager',
+    name: 'Lisa',
+    id: '1',
+    email: 'lisa@gmail.com',
+    officeNumber: '15B'
+  },
+  {
+    type: 'Engineer',
+    name: 'Alicia',
+    id: '342',
+    email: 'mcneila1997@gmail.com',
+    github: 'aMcCode'
+  },
+  {
+    type: 'Intern',
+    name: 'Kia',
+    id: '379',
+    email: 'kiaj@gmail.com',
+    school: 'NCCU'
+  },
+  {
+    type: 'Engineer',
+    name: 'Alicia',
+    id: '342',
+    email: 'mcneila1997@gmail.com',
+    github: 'aMcCode'
+  },
+  {
+    type: 'Intern',
+    name: 'Heidi',
+    id: '235',
+    email: 'heidi@gmail.com',
+    school: 'NCCU'
+  },
+  {
+    type: 'Intern',
+    name: 'Mya',
+    id: '111',
+    email: 'mya@gmail.com',
+    school: 'NC State'
+  }
+]
 
 module.exports = { managerQuestions, employeeQuestions, mock_inputs };
