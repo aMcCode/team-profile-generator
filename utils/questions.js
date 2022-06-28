@@ -151,48 +151,12 @@ const employeeQuestions = [
 ];
 
 const mock_inputs = [
-  {
-    type: 'Manager',
-    name: 'Lisa',
-    id: '1',
-    email: 'lisa@gmail.com',
-    officeNumber: '15B'
-  },
-  {
-    type: 'Engineer',
-    name: 'Alicia',
-    id: '342',
-    email: 'mcneila1997@gmail.com',
-    github: 'aMcCode'
-  },
-  {
-    type: 'Intern',
-    name: 'Kia',
-    id: '379',
-    email: 'kiaj@gmail.com',
-    school: 'NCCU'
-  },
-  {
-    type: 'Engineer',
-    name: 'Alicia',
-    id: '342',
-    email: 'mcneila1997@gmail.com',
-    github: 'aMcCode'
-  },
-  {
-    type: 'Intern',
-    name: 'Heidi',
-    id: '235',
-    email: 'heidi@gmail.com',
-    school: 'NCCU'
-  },
-  {
-    type: 'Intern',
-    name: 'Mya',
-    id: '111',
-    email: 'mya@gmail.com',
-    school: 'NC State'
-  }
+  new Manager('Lisa', 1, 'lisa@gmail.com', '15B'),
+  new Engineer('Rocky', 4, 'rock@msn.com', 'rocCode'),
+  new Engineer('Alicia', 2, 'mcneila1997@gmail.com', 'aMcCode'),
+  new Intern('Kia', 3, 'kiaj@gmail.com', 'NCCU'),
+  new Intern('Mya', 6, 'mya@gmail.com', 'NC State'),
+  new Intern('Heidi', 5, 'heidi@gmail.com', 'NCCU')
 ]
 
 module.exports = { managerQuestions, employeeQuestions, mock_inputs };

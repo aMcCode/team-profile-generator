@@ -1,8 +1,10 @@
 const inquirer = require("inquirer");
+const fs = require('fs');
 const { managerQuestions, employeeQuestions, mock_inputs } = require("./utils/questions.js");
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const genHTML = require('./src/generateHTML');
 
 let team_data = []
 
@@ -28,16 +30,25 @@ const promptEmployeeQuestions = () => {
     });
 };
 
+const writeFile = fileContent => {
+  fs.writeFile('./dist/index.html', fileContent, err => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    else{
+      console.log( 'File created!');
+    }
+  });
+};
+
 // Function call to initialize app
 function init() {
     prompManagerQuestions()
       .then(promptEmployeeQuestions)
       .then(() => {
-        //console.log(team_data);
-        team_data.forEach(itm => {
-          if(itm instanceof Intern)
-            console.log(itm);
-        });
+        //console.log("nottest");
     
        })
     //   .then(employee_data => { return generateHTML(employee_data); })
@@ -49,9 +60,9 @@ function init() {
 
 // TEST Function call to initialize app
 async function testInit() {
-    // const mockTxt = generateMarkdown(mock_inputs)
-    // await writeFile(mockTxt);
-    console.log(mock_inputs);
+    const mockTxt = genHTML(mock_inputs)
+    writeFile(mockTxt);
+    // console.log(mock_inputs);
   };
   
   if(!DEBUG)
