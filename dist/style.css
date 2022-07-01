@@ -1,0 +1,47 @@
+.columns {
+    margin-left: 2.6% !important;
+    border: 1px solid rgb(157, 219, 157);
+    box-shadow: 5px 10px 3px  rgb(157, 219, 157,.5);
+    margin-bottom: 5vh;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', "Calibri", 'Trebuchet MS', sans-serif;
+}
+
+.page-header {
+    padding-top: 1.5vh;
+    text-align: center;
+    margin-bottom: 2vh;
+    background-image: linear-gradient(rgb(157, 219, 157) ,  rgb(216, 216, 19, .25));
+    font-family: Script MT;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 48px;
+    color: rgb(133, 79, 21);
+}
+
+.card-header {
+    background-color: rgb(157, 219, 157, .75);
+    font-size: 20px;
+    padding-left: 1vw;
+    font-weight: bold;
+    color: rgb(133, 79, 21);
+}
+
+.card-body {
+    font-size: 16px;
+    padding-top: 2vh;
+    color: rgb(133, 79, 21);
+}
+
+ul {
+    margin-left: 2vw;
+    list-style: none;
+}
+
+span {
+    font-weight: bold;
+}

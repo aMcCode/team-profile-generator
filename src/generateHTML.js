@@ -38,19 +38,21 @@ const getEmployees = (employee_list) => {
         if(e.name === itm) {
 
           let roleSpecificTxt = e.getRole() === "Manager" ? "Office Number" : e.getRole() === "Engineer" ? "Github" : "School";
-          let roleSpecificFunction = e.getRole() === "Manager" ? e.getOfficeNum() : e.getRole() === "Engineer" ? e.getGithub() : e.getSchool();
+          let roleSpecificFunction = e.getRole() === "Manager" ? e.getOfficeNum() : e.getRole() === "Engineer" ? `<a href="https://github.com/${e.getGithub()}">${e.getGithub()}</a>` : e.getSchool();
 
           txt += `
-          <div class="card-wrapper" >
+          <div class="four columns">
           <div class="card-header">
+            ${e.getName()}<br/>
             ${e.getRole()} <i class="fas fa-baby"></i>
           </div>
+          <div class="card-body">
           <ul class="list">
-            <li class="list-item">Name: ${e.getName()}</li>
-            <li class="list-item">Employee ID: ${e.id}</li>
-            <li class="list-item">${roleSpecificTxt}: ${roleSpecificFunction}</li>
-            <li class="list-item">Email: <a href="mailto:${e.email}">${e.email}</a></li>
+            <li class="list-item"><span>Employee ID:</span> ${e.id}</li>
+            <li class="list-item"><span>${roleSpecificTxt}:</span> ${roleSpecificFunction}</li>
+            <li class="list-item"><span>Email:</span> <a href="mailto:${e.email}">${e.email}</a></li>
           </ul>
+        </div>
         </div>`
       }
     });
@@ -71,31 +73,40 @@ const html_text = (team_data) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Team Details</title>
+      <!-- FONT -->
+      <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+      <!-- CSS -->
+      <link rel="stylesheet" href="normalize.css">
+      <link rel="stylesheet" href="skeleton.css">
+      <link rel="stylesheet" href="style.css">
+      <!-- Favicon -->
+      <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
     </head>
     <body>
-    <div id="headerDiv">
-      <h1>${managerName}'s Team</h1>
-    </div>
-    <main id="mainDiv">
-    <div class="card-wrapper" >
-    <div class="card-header">
-      ${manager_role} <i class="fas fa-baby"></i>
-    </div>
-    <div class="card-wrapper" >
-    <div class="card-header">
-    <ul class="list">
-      <li class="list-item">Name: ${managerName}</li>
-      <li class="list-item">Employee ID: ${manager_id}</li>
-      <li class="list-item">Office Number: ${officeNum}</li>
-      <li class="list-item">Email: <a href="mailto:${manager_email}">${manager_email}</a></li>
-    </ul>
-    </div>
-    </div>
-      ${getEmployees(engineers)}
-      ${getEmployees(interns)}
-    </main>
-    </body>
-    </html>
+    <section class="u-full-width">
+    <div class="page-header"><h1>${managerName}'s Team</h1></div>
+        <div class="container">
+          <div class="row">
+            <div class="four columns">
+              <div class="card-header">
+              ${managerName}<br/>
+              ${manager_role} <i class="fas fa-baby"></i>
+              </div>
+              <div class="card-body" >
+                <ul class="list">
+                  <li class="list-item"><span>Employee ID:</span> ${manager_id}</li>
+                  <li class="list-item"><span>Office Number:</span> ${officeNum}</li>
+                  <li class="list-item"><span>Email:</span> <a href="mailto:${manager_email}">${manager_email}</a></li>
+                </ul>
+              </div>
+            </div>
+            ${getEmployees(engineers)}
+            ${getEmployees(interns)}
+          </div> <!--row-->
+        </div>
+   </section>
+  </body>
+  </html>
     `;
 
 };
