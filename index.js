@@ -1,12 +1,14 @@
 const inquirer = require("inquirer");
-const { managerQuestions, employeeQuestions, mock_inputs } = require("./utils/questions.js");
+const fs = require('fs');
+const { managerQuestions, employeeQuestions /*, mock_inputs */} = require("./utils/questions.js");
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const genHTML = require('./src/generateHTML');
 
 let team_data = []
 
-const DEBUG = true;
+// const DEBUG = true;
 
 const prompManagerQuestions = () => {
     return inquirer.prompt(managerQuestions)
@@ -28,33 +30,36 @@ const promptEmployeeQuestions = () => {
     });
 };
 
+const writeFile = fileContent => {
+  fs.writeFile('./dist/index.html', fileContent, err => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+
+    else{
+      console.log( 'File created!');
+    }
+  });
+};
+
 // Function call to initialize app
 function init() {
     prompManagerQuestions()
       .then(promptEmployeeQuestions)
-      .then(() => {
-        //console.log(team_data);
-        team_data.forEach(itm => {
-          if(itm instanceof Intern)
-            console.log(itm);
-        });
-    
-       })
-    //   .then(employee_data => { return generateHTML(employee_data); })
-    //   .then(HTML_Txt => { return writeFile(HTML_Txt); })
-      .catch(err => {
-        console.log(err);
-      });
+      .then( () => { return genHTML(team_data); })
+      .then(HTML_Txt => { return writeFile(HTML_Txt); })
+      .catch(err => { console.log(err); });
 }
 
+init();
+
 // TEST Function call to initialize app
-async function testInit() {
-    // const mockTxt = generateMarkdown(mock_inputs)
-    // await writeFile(mockTxt);
-    console.log(mock_inputs);
-  };
-  
-  if(!DEBUG)
-    init();
-  else
-    testInit();
+// async function testInit() {
+//     const mockTxt = genHTML(mock_inputs)
+//     writeFile(mockTxt);
+//   };
+//   if(!DEBUG)
+//     init();
+//   else
+//     testInit();
