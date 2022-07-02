@@ -37,14 +37,15 @@ const getEmployees = (employee_list) => {
       employee_list.find(e => {
         if(e.name === itm) {
 
-          let roleSpecificTxt = e.getRole() === "Manager" ? "Office Number" : e.getRole() === "Engineer" ? "Github" : "School";
-          let roleSpecificFunction = e.getRole() === "Manager" ? e.getOfficeNum() : e.getRole() === "Engineer" ? `<a href="https://github.com/${e.getGithub()}">${e.getGithub()}</a>` : e.getSchool();
+          let roleSpecificTxt = e.getRole() === "Engineer" ? "Github" : "School";
+          let roleSpecificFunction = e.getRole() === "Engineer" ? `<a href="https://github.com/${e.getGithub()}">${e.getGithub()}</a>` : e.getSchool();
+          let favacon = e.getRole() === "Engineer" ? `<i class="fas fa-laptop-code"></i>` : `<i class="fas fa-user-graduate"></i>`;
 
           txt += `
           <div class="four columns">
           <div class="card-header">
             ${e.getName()}<br/>
-            ${e.getRole()} <i class="fas fa-baby"></i>
+            ${e.getRole()} ${favacon}
           </div>
           <div class="card-body">
           <ul class="list">
@@ -73,14 +74,11 @@ const html_text = (team_data) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Team Details</title>
-      <!-- FONT -->
-      <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
-      <!-- CSS -->
       <link rel="stylesheet" href="normalize.css">
       <link rel="stylesheet" href="skeleton.css">
       <link rel="stylesheet" href="style.css">
-      <!-- Favicon -->
-      <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     </head>
     <body>
     <section class="u-full-width">
@@ -90,7 +88,7 @@ const html_text = (team_data) => {
             <div class="four columns">
               <div class="card-header">
               ${managerName}<br/>
-              ${manager_role} <i class="fas fa-baby"></i>
+              ${manager_role} <i class="fas fa-glasses"></i>
               </div>
               <div class="card-body" >
                 <ul class="list">
@@ -102,7 +100,7 @@ const html_text = (team_data) => {
             </div>
             ${getEmployees(engineers)}
             ${getEmployees(interns)}
-          </div> <!--row-->
+          </div> <!-- row -->
         </div>
    </section>
   </body>
