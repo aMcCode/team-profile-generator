@@ -36,7 +36,7 @@ The installation step(s) is/are as follows:
 ## Usage
 When you run the program from the root directory using the command 'node index', the application will walk you through a few questions. Once you've answered the final question, the app will generate an HTML file with a formatted rendering of your responses. Note: The HTML file will be saved in the 'dist' folder.
 ***
-
+g
 ## License
 This application is covered under the Unlicense license. For more information, visit:
   http://unlicense.org/.
