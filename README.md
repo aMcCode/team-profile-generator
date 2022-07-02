@@ -9,7 +9,7 @@ See a video walk-through on [Google Drive.](https://drive.google.com/file/d/1vRk
 
 ![Team Profile Screenshot](./images/Output.gif?raw=true "Team Profile Screenshot")
 
-![Inquirer Prompts](./images/Output.gif?raw=true "Inquirer Prompts")
+![Inquirer Prompts](./images/Questions.gif?raw=true "Inquirer Prompts")
 
 ## Table of Contents
 * [Description](#Description)
