@@ -3,7 +3,13 @@
 
 [![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/) [![GitHub last commit](https://img.shields.io/github/last-commit/aMcCode/readme-generator?style=flat)]()
 
-This command-line application uses the [Inquirer](https://www.npmjs.com/package/inquirer) NPM package to dynamically generate a team-profile formatted as an html file. The Skeleton CSS framework was used to format the responsive html.
+This command-line application uses the [Inquirer](https://www.npmjs.com/package/inquirer) NPM package to dynamically generate a team-profile formatted as an html file. The [Skeleton CSS](http://getskeleton.com/) framework was used to format the responsive html.
+
+See a video walk-through on [Google Drive.](https://drive.google.com/file/d/1vRkyAAO6ohqORGAxU0sJfGnSGpeS9284/view )
+
+![Team Profile Screenshot](./Output.gif?raw=true "Team Profile Screenshot")
+
+![Inquirer Prompts](./Output.gif?raw=true "Inquirer Prompts")
 
 ## Table of Contents
 * [Description](#Description)
@@ -46,6 +52,11 @@ The Jest testing framework was used to validate JavaScript classes. The followin
 2. Manager.test.js
 3. Engineer.test.js
 4. Intern.test.js
+
+See video of tests in action [here.](https://drive.google.com/file/d/1t0Sig9prMVmzJNWfzeSNYFgAyNegKvCI/view)
+
+![Passed Test Screenshot](./Tests.gif?raw=true "Passed Test Screenshot")
+
 
 ***
 
