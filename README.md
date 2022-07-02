@@ -7,9 +7,9 @@ This command-line application uses the [Inquirer](https://www.npmjs.com/package/
 
 See a video walk-through on [Google Drive.](https://drive.google.com/file/d/1vRkyAAO6ohqORGAxU0sJfGnSGpeS9284/view )
 
-![Team Profile Screenshot](./Output.gif?raw=true "Team Profile Screenshot")
+![Team Profile Screenshot](.images/Output.gif?raw=true "Team Profile Screenshot")
 
-![Inquirer Prompts](./Output.gif?raw=true "Inquirer Prompts")
+![Inquirer Prompts](.images/Output.gif?raw=true "Inquirer Prompts")
 
 ## Table of Contents
 * [Description](#Description)
@@ -55,7 +55,7 @@ The Jest testing framework was used to validate JavaScript classes. The followin
 
 See video of tests in action [here.](https://drive.google.com/file/d/1t0Sig9prMVmzJNWfzeSNYFgAyNegKvCI/view)
 
-![Passed Test Screenshot](./Tests.gif?raw=true "Passed Test Screenshot")
+![Passed Test Screenshot](.images/Tests.gif?raw=true "Passed Test Screenshot")
 
 
 ***
