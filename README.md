@@ -1,7 +1,7 @@
 
 # Team Profile Generator
 
-[![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/) [![GitHub last commit](https://img.shields.io/github/last-commit/aMcCode/readme-generator?style=flat)]()
+[![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/) [![GitHub last commit](https://img.shields.io/github/last-commit/aMcCode/team-profile-generator?style=flat)]()
 
 This command-line application uses the [Inquirer](https://www.npmjs.com/package/inquirer) NPM package to dynamically generate a team-profile formatted as an html file. The [Skeleton CSS](http://getskeleton.com/) framework was used to format the responsive html.
 
