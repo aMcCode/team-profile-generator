@@ -17,8 +17,7 @@ const managerQuestions = [
       },
     },
     {
-        //TODO: Check if is int
-        type: "input",
+        type: "number",
         name: "managerID",
         message: "What is the team Manager's ID? (Required)",
         validate: (managerID) => {
@@ -47,7 +46,6 @@ const managerQuestions = [
         },
     },
     {
-        //TODO: Check if is int
         type: "input",
         name: "managerOfficeNum",
         message: "What is the team Manager's office number? (Required)",
@@ -89,8 +87,7 @@ const employeeQuestions = [
       when: (answers) => answers.nextStep != "Finish building my team"
     },
     {
-        //TODO: Check if is int
-        type: "input",
+        type: "number",
         name: "employeeID",
         message: "What is the team employee's ID? (Required)",
         validate: (employeeID) => {
