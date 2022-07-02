@@ -17,14 +17,14 @@ const managerQuestions = [
       },
     },
     {
-        type: "number",
+        type: "input",
         name: "managerID",
         message: "What is the team Manager's ID? (Required)",
         validate: (managerID) => {
-          if (managerID) {
+          if (managerID && !isNaN(managerID)) {
             return true;
           } else {
-            console.log("Please the Manager's ID?");
+            console.log("Please provide the Manager's ID as a number. (Please clear any previous input.)");
             return false;
           }
         },
@@ -87,14 +87,14 @@ const employeeQuestions = [
       when: (answers) => answers.nextStep != "Finish building my team"
     },
     {
-        type: "number",
+        type: "input",
         name: "employeeID",
         message: "What is the team employee's ID? (Required)",
         validate: (employeeID) => {
-          if (employeeID) {
+          if (employeeID && !isNaN(employeeID)) {
             return true;
           } else {
-            console.log("Please the employee's ID?");
+            console.log("Please the employee's ID as a number. (Please clear any previous input.)");
             return false;
           }
         },
@@ -156,4 +156,4 @@ const employeeQuestions = [
 //   new Intern('Heidi', 5, 'heidi@gmail.com', 'NCCU')
 // ]
 
-module.exports = { managerQuestions, employeeQuestions, mock_inputs };
+module.exports = { managerQuestions, employeeQuestions/*, mock_inputs*/ };

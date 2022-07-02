@@ -3,7 +3,7 @@
 
 [![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/) [![GitHub last commit](https://img.shields.io/github/last-commit/aMcCode/readme-generator?style=flat)]()
 
-This command-line application uses the [Inquirer](https://www.npmjs.com/package/inquirer) NPM package to dynamically generate a team-profile formatted as an html file.
+This command-line application uses the [Inquirer](https://www.npmjs.com/package/inquirer) NPM package to dynamically generate a team-profile formatted as an html file. The Skeleton CSS framework was used to format the responsive html.
 
 ## Table of Contents
 * [Description](#Description)
@@ -16,14 +16,14 @@ This command-line application uses the [Inquirer](https://www.npmjs.com/package/
 ***
 
 ## Description
-The is a Node.js application that uses the Inquirer NPM package. Users are prompted to provide basic details about team members via a set of command line prompts. Once all questions are answered, th an html page is generated  to display team members.
+The is a Node.js application that uses the Inquirer NPM package. Users are prompted to provide basic details about team members via a set of command line prompts. Once all questions are answered, an html page is generated to display team members.
 ***
 
 ## Installation
 The installation step(s) is/are as follows:
 
 1. Clone the repo.
-2. From the root directory, run 'npm i'
+2. From the root directory, run 'npm i'.
 
 ***
 
@@ -41,7 +41,7 @@ Not accepting contributions at this time.
 ***
 
 ## Tests
-The following test(s) was/were implemented:
+The Jest testing framework was used to validate JavaScript classes. The following test were implemented:
 1. Employee.test.js
 2. Manager.test.js
 3. Engineer.test.js
