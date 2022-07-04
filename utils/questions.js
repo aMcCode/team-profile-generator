@@ -1,6 +1,6 @@
-const Manager = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Manager');
-const Engineer = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Engineer');
-const Intern = require('C:\\Users\\mcnei\\repos\\challenges\\team-profile-generator\\lib\\Intern');
+const Manager = require('../lib/Manager');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
 
 const managerQuestions = [
     {
